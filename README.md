@@ -2,7 +2,7 @@
 
 ## Configuración TypeScript
 
-![VUE%20JS%209e0a199cec8a44cc90060c994f9cd51d/Untitled.png](VUE%20JS%209e0a199cec8a44cc90060c994f9cd51d/Untitled.png)
+![img/Untitled.png](img/Untitled.png)
 
 ## Auxiliares
 
