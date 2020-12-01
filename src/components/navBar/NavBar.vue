@@ -16,7 +16,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item>Inicio</b-nav-item>
+          <b-nav-item to="/">Inicio</b-nav-item>
           <b-nav-item-dropdown text="Categorias" right>
             <b-dropdown-item v-for="(category,index) in categories" :key="index">{{category.name}}</b-dropdown-item>
           </b-nav-item-dropdown>
@@ -55,7 +55,7 @@ export default class NavBar extends Vue {
     const response = await fetch("https://jsonfy.com/categories");
     const json = await response.json();
     this.categories = json;
-    console.log(json);
+    //console.log(json);
   }
 }
 </script>

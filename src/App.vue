@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <navBar/>
+  <div >
+    <div >
+      <NavBar/>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import NavBar from './components/navBar/NavBar.vue';
+<script>
+import NavBar from '@/components/navBar/NavBar.vue'
 
-@Component({
+export default {
+  name: 'Home',
   components: {
-    NavBar,
-  },
-})
-export default class App extends Vue {}
+    NavBar
+  }
+}
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #e77810;
-  margin-top: 0;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
