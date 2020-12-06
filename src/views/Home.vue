@@ -1,9 +1,10 @@
 <template>
-  <div class="home">
-    <div v-for="(photo,index) in photos" :key="index">
+  <div class="container mt-3">
+    <b-card-group deck>
+    <div v-for="(photo,index) in photos.slice(0, 5)" :key="index">
       <b-card
         title="Card Title"
-        img-src="https://picsum.photos/600/300/?image=25"
+        v-bind:img-src="photo.url"
         img-alt="Image"
         img-top
         tag="article"
@@ -18,6 +19,7 @@
         <b-button href="#" variant="primary">Go somewhere</b-button>
       </b-card>
     </div>
+    </b-card-group>
   </div>
 </template>
 
