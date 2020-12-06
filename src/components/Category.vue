@@ -23,7 +23,6 @@ export default class Category extends Vue {
     const response = await fetch("https://jsonfy.com/categories/"+this.$route.params.id);
     const json = await response.json();
     this.category = json;
-    console.log(this.category);
     
   }
 }
