@@ -16,9 +16,12 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item>Inicio</b-nav-item>
+          <b-nav-item to="/">Inicio</b-nav-item>
           <b-nav-item-dropdown text="Categorias" right>
-            <b-dropdown-item v-for="(category,index) in categories" :key="index">{{category.name}}</b-dropdown-item>
+            
+            <div v-for="(category,index) in categories" :key="index">
+              <b-dropdown-item v-bind:to="'/category/'+category.id">{{category.name}}</b-dropdown-item>
+            </div>
           </b-nav-item-dropdown>
           <b-nav-item>Random</b-nav-item>
         </b-navbar-nav>
