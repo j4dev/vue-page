@@ -41,12 +41,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { Category } from "../../models/category.interface";
 
 @Component
 export default class NavBar extends Vue {
   @Prop() private msg!: string;
 
-  categories = [];
+  categories: Array<Category> = [];
 
   mounted() {
     this.getData();
@@ -55,7 +56,6 @@ export default class NavBar extends Vue {
     const response = await fetch("https://jsonfy.com/categories");
     const json = await response.json();
     this.categories = json;
-    //console.log(json);
   }
 }
 </script>
