@@ -13,6 +13,11 @@ const routes: Array<RouteConfig> = [
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
+  },
+  {
+    path: '/category/:id',
+    name: 'categoria',
+    component: () => import('../views/Category.vue')
   }
 ]
 
